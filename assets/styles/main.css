@@ -1,0 +1,99 @@
+body, body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+    display: flex;
+    position: relative;
+    min-height: 100vh; /* min-h-screen */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    min-width: 0px;
+    background-color: rgba(255, 255, 255, 1);
+    align-items: flex-start;
+}
+
+/* Meniu */
+.navMenu {
+    display: flex;
+    flex: 1 1 auto; /* flex auto */
+    position: relative;
+    width: 15%;
+    height: 100%; /* h-full */
+    flex-direction: column;
+    border-right: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+.navMenu .navHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    font-weight: 400;
+    font-size:x-large;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.navMenu nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.navMenu nav a {
+    display: flex;
+    margin-top: 3px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navMenu nav a:hover{
+    background-color: rgba(229, 231, 235, 0.5);
+}
+
+.navMenu nav a.active{
+    background-color: rgba(229, 231, 235, 0.5);
+}
+
+.content {
+    display: flex;
+    margin-left: 40px;
+    width: 100%;
+    height: 100%; /* h-full */
+}
+
+
+/* UTILE */
+
+.divider {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+    margin: 15px;
+}
+
+/*
+ LINKS
+*/
+
+a {
+    text-decoration:none;
+}
+
+/* ALTELE
+    text size/weight/color
+*/
+.text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
