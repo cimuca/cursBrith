@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20px;
+    margin-left: 20px;
+    margin-bottom: 28px;
+}
+
+.content {
+    display: flex;
+    margin-left: 20px;
+    flex-direction: row;
+}
+
+.content .left {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+}
+
+.content .right {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+/* UTILE */
+.divider {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+    margin: 15px;
+}
