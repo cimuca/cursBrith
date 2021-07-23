@@ -1,0 +1,104 @@
+<!-- Style -->
+<style type="text/css">
+  body {
+    background-color: rgba(243, 243, 243, 0.5);
+  }
+  .container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20px;
+    margin-left: 20px;
+    margin-bottom: 28px;
+  }
+
+  .content {
+    margin: 0 20px 0 20px;
+  }
+
+  .formular {
+    max-width: 32rem;
+    flex-grow: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .divider {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+    margin: 15px;
+  }
+</style>
+
+<!-- Container -->
+<div class="container">
+  <!-- Header-->
+  <div class="header">
+    <h1>Contact</h1>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- Content -->
+  <div class="content">
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+
+      <form class="formular" action="mailto:cimucac@gmail.com" method="post">
+        <div style="display: flex; flex-direction: column;padding-top:5px">
+          <label for="nume"
+             style="margin-bottom: 2px; align-self: flex-start; font-weight: 500; color: rgba(31, 41, 55, 1);">Nume
+          </label>
+          <input type="text" id="nume" name="nume" placeholder="Nume"
+             style="outline: 2px solid transparent; outline-offset: 2px; padding:5px; border-width: 1px;opacity: 0.5; border-radius: 0.25rem;"
+             autocomplete="off"
+          />
+        </div>
+
+        <div style="display: flex; flex-direction: column;padding-top:5px">
+          <label for="prenume"
+             style="margin-bottom: 2px; align-self: flex-start; font-weight: 500; color: rgba(31, 41, 55, 1);">Prenume
+          </label>
+          <input type="text" id="prenume" name="prenume" placeholder="Prenume"
+             style="outline: 2px solid transparent; outline-offset: 2px; padding:5px; border-width: 1px;opacity: 0.5; border-radius: 0.25rem;"
+             autocomplete="off"
+          />
+        </div>
+
+        <div style="display: flex; flex-direction: column;padding-top:5px">
+          <label for="email"
+             style="margin-bottom: 2px; align-self: flex-start; font-weight: 500; color: rgba(31, 41, 55, 1);">Email
+          </label>
+          <input type="text" id="email" name="email" placeholder="Email"
+             style="outline: 2px solid transparent; outline-offset: 2px; padding:5px; border-width: 1px;opacity: 0.5; border-radius: 0.25rem;"
+             autocomplete="off"
+          />
+        </div>
+
+        <div style="display: flex; flex-direction: column;padding-top:5px">
+          <label for="mesaj"
+             style="margin-bottom: 2px; align-self: flex-start; font-weight: 500; color: rgba(31, 41, 55, 1);">Mesaj
+          </label>
+          <textarea rows="10" type="text" id="mesaj" name="mesaj" placeholder="Mesajul dumneavoastra"
+             style="outline: 2px solid transparent; outline-offset: 2px; padding:5px; border-width: 1px;opacity: 0.5; border-radius: 0.25rem;"
+             autocomplete="off"
+          ></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; margin-top: 10px;">
+          <button type="submit">Trimite</button>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>
