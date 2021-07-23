@@ -54,7 +54,17 @@
     <!-- Content -->
     <div class="content">
       <div style="padding:10px">
-        <em> Galeria mea.</em>
+        <script type="text/javascript">
+            var titlu = 'Galeria mea';
+            var val = 10;
+            if(val < 10){
+                document.write('<h3> Nespecificat </h3>');
+            } else if (val >= 11) {
+                document.write('<h3> Nespecificat </h3>');
+            } else {
+                document.write('<em>' + titlu + '</em>');
+            }
+        </script>
       </div>
 
       <div style="display: flex; flex-wrap: wrap;">

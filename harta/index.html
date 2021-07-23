@@ -1,6 +1,23 @@
 
 <div style="display: flex; justify-content: center; margin-top: 30px;">
-  Selecteaza Transilvania, Moldova sau walachia.
+  <script type="text/javascript">
+    var regiuni = new Array();
+    regiuni = ["Transilvania", "Moldova", "Walachia"];
+    document.write('Selecteaza: ');
+    
+    /*
+      Loop
+    */
+    for(i = 0; i < regiuni.length; i++){
+      if((i + 1) == regiuni.length){
+        document.write(' sau ' + regiuni[i]);
+      } else if((i + 1) == (regiuni.length - 1)){
+        document.write('<strong>' + regiuni[i] + '<strong>');
+      } else {
+        document.write('<strong>' + regiuni[i] + '<strong>, ');
+      }
+    }
+  </script>
 </div>
 
 <div style="display: flex; justify-content: center; margin-top: 30px;">

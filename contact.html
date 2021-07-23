@@ -51,6 +51,23 @@
 
   <!-- Content -->
   <div class="content">
+    <script type="text/javascript">
+      var fields = new Array();
+      fields = ["Nume", "Prenume", "email"];
+      document.write('Campuri obligatorii: ');
+
+      /*
+        Loop
+      */
+      for(i = 0; i < fields.length; i++){
+        if((i + 1) == fields.length){
+          document.write(fields[i]);
+        } else {
+          document.write('<strong>' + fields[i] + '<strong>,');
+        }
+      }
+    </script>
+
     <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
 
       <form class="formular" action="mailto:cimucac@gmail.com" method="post">
