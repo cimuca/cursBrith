@@ -31,9 +31,9 @@
   }
 
   function incarcaDateleMele(){
-    document.getElementById('nume').setAttribute('value', 'Cristian');
-    document.getElementById('prenume').setAttribute('value', 'Cristian');
-    document.getElementById('email').setAttribute('value', 'cimucac@gmail.com');
+    document.getElementById("nume").value = 'Cimuca';
+    document.getElementById("prenume").value = 'Cristian';
+    document.getElementById("email").value = 'cimucac@gmail.com';
   }
 
   // Show/hide info
@@ -50,17 +50,17 @@
 <form method="post" id="contact" action="mailto:cimucac@gmail.com" onsubmit="return validareFormular()">
   <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 50px;">
     <div style="width: 500px;">
-      <input type="text" id="nume" name="nume" placeholder="Nume"
+      <input type="text" id="nume" name="nume" placeholder="Nume" value=""
         style="outline: 2px solid transparent; width: 500px; outline-offset: 2px; padding:5px; border-width: 1px;opacity: 0.5; border-radius: 0.25rem; margin-bottom: 10px;"
         autocomplete="off" onchange="verifica('#nume', '.numeVal')"/>
       <div class="numeVal" style="margin-bottom: 10px;"></div>
 
-      <input type="text" id="prenume" name="prenume" placeholder="Prenume"
+      <input type="text" id="prenume" name="prenume" placeholder="Prenume" value=""
         style="outline: 2px solid transparent; width: 500px; outline-offset: 2px; padding:5px; border-width: 1px;opacity: 0.5; border-radius: 0.25rem; margin-bottom: 10px"
         autocomplete="off" onchange="verifica('#prenume', '.prenumeVal')"/>
       <div class="prenumeVal" style="margin-bottom: 10px;"></div>
 
-      <input type="text" id="email" name="email" placeholder="Adresa email"
+      <input type="text" id="email" name="email" placeholder="Adresa email" value=""
         style="outline: 2px solid transparent; width: 500px; outline-offset: 2px; padding:5px; border-width: 1px;opacity: 0.5; border-radius: 0.25rem; margin-bottom: 10px" 
         autocomplete="off" onchange="verifica('#email', '.emailVal')"/>
       <div class="emailVal" style="margin-bottom: 10px;"></div>
@@ -79,10 +79,10 @@
       </div>
 
       <!-- Info -->
-      <div id="datelemeleInfo" style="width: 100%; display: none; border: 1px solid rgb(214, 214, 214); padding:10px; margin-top:10px;">
+      <div id="datelemeleInfo" style="width: 480px; display: none; border: 1px solid rgb(214, 214, 214); padding:10px; margin-top:10px;">
           Foloseste <strong>Incarca datele mele</strong> atunci cand vrei sa incarci automat datele tale personale salvate in sistem.
       </div>
-      <div id="trimiteInfo" style="width: 100%; display: none; border: 1px solid rgb(214, 214, 214); padding:10px; margin-top:10px;">
+      <div id="trimiteInfo" style="width: 480px; display: none; border: 1px solid rgb(214, 214, 214); padding:10px; margin-top:10px;">
           Foloseste butonul <strong>Trimite</strong> pentru a prelua datele completate in formular si transmite mai departe catre adresa de email din sistem.
       </div>
     </div>
