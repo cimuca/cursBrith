@@ -1,0 +1,90 @@
+<script type="text/javascript">
+  function validareFormular(){
+
+    // form obj
+    var formObj = {};
+    var formArray = [];
+
+    // creare obiect dar si array cu datele din formular (nu le folosim in pagina)
+    var nume = document.getElementById('nume').value; /* object */ formObj.nume = nume; /* array */ if(nume) {formArray.push(nume)};
+    var prenume = document.getElementById('prenume').value; /* object */ formObj.prenume = prenume; /* array */ if(prenume) {formArray.push(prenume)};
+    var email = document.getElementById('email').value; /* object */ formObj.email = email; /* array */ if(email) {formArray.push(email)};
+
+    // log
+    console.log(formObj); console.log(formArray);
+
+    // nu trimitem email daca unul din cele trei campuri nu sunt completate
+    if(formArray.length < 3){
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  function verifica(selectedElement, resultElement){
+    var selectedE = document.querySelector(selectedElement);
+    var result = document.querySelector(resultElement);
+    
+    result.textContent = selectedE.value;
+
+    return true;
+  }
+
+  function incarcaDateleMele(){
+    document.getElementById('nume').setAttribute('value', 'Cristian');
+    document.getElementById('prenume').setAttribute('value', 'Cristian');
+    document.getElementById('email').setAttribute('value', 'cimucac@gmail.com');
+  }
+
+  // Show/hide info
+  function showInfo(el){
+    document.getElementById(el).style.display = 'block';
+  }
+
+  function hideInfo(el){
+    document.getElementById(el).style.display = 'none';
+  }
+
+</script>
+
+<form method="post" id="contact" action="mailto:cimucac@gmail.com" onsubmit="return validareFormular()">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;margin-top: 50px;">
+    <div style="width: 500px;">
+      <input type="text" id="nume" name="nume" placeholder="Nume"
+        style="outline: 2px solid transparent; width: 500px; outline-offset: 2px; padding:5px; border-width: 1px;opacity: 0.5; border-radius: 0.25rem; margin-bottom: 10px;"
+        autocomplete="off" onchange="verifica('#nume', '.numeVal')"/>
+      <div class="numeVal" style="margin-bottom: 10px;"></div>
+
+      <input type="text" id="prenume" name="prenume" placeholder="Prenume"
+        style="outline: 2px solid transparent; width: 500px; outline-offset: 2px; padding:5px; border-width: 1px;opacity: 0.5; border-radius: 0.25rem; margin-bottom: 10px"
+        autocomplete="off" onchange="verifica('#prenume', '.prenumeVal')"/>
+      <div class="prenumeVal" style="margin-bottom: 10px;"></div>
+
+      <input type="text" id="email" name="email" placeholder="Adresa email"
+        style="outline: 2px solid transparent; width: 500px; outline-offset: 2px; padding:5px; border-width: 1px;opacity: 0.5; border-radius: 0.25rem; margin-bottom: 10px" 
+        autocomplete="off" onchange="verifica('#email', '.emailVal')"/>
+      <div class="emailVal" style="margin-bottom: 10px;"></div>
+
+      <select id="sex" name="sex" onchange="verifica('#sex', '.sexVal')" style="display: block; width: 100%; height: 30px; padding: 0 5px 0 5px; border-width: 1px;opacity: 0.5;">
+        <option value="nespecificat">Sex</option>
+        <option value="masculin">Masculin</option>
+        <option value="feminin">Feminin</option>
+      </select>
+
+      <div class="sexVal"></div>
+
+      <div style="display: flex; justify-content: flex-end; margin-top: 10px;">
+        <button type="button" id="datelemele" style="margin-right: 5px;" onclick="incarcaDateleMele();" onmouseenter="showInfo('datelemeleInfo');" onmouseleave="hideInfo('datelemeleInfo')">Incarca datele mele</button>
+        <button type="submit" id="formButton" onmouseenter="showInfo('trimiteInfo');" onmouseleave="hideInfo('trimiteInfo')">Trimite</button>
+      </div>
+
+      <!-- Info -->
+      <div id="datelemeleInfo" style="width: 100%; display: none; border: 1px solid rgb(214, 214, 214); padding:10px; margin-top:10px;">
+          Foloseste <strong>Incarca datele mele</strong> atunci cand vrei sa incarci automat datele tale personale salvate in sistem.
+      </div>
+      <div id="trimiteInfo" style="width: 100%; display: none; border: 1px solid rgb(214, 214, 214); padding:10px; margin-top:10px;">
+          Foloseste butonul <strong>Trimite</strong> pentru a prelua datele completate in formular si transmite mai departe catre adresa de email din sistem.
+      </div>
+    </div>
+  </div>
+</form>

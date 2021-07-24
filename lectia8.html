@@ -1,0 +1,40 @@
+<script>
+    // Mesaj
+    function arataMesaj(status) {
+        alert('Mesaj afisat cu' + status);
+    }
+
+    // arata element
+    function arataElement(element){
+        var el = document.getElementById(element);
+        el.style.display = 'block';
+    }
+
+    function schimbaCuloarea(action, element, culoare){
+        var defColor = 'beige';
+        var el = document.getElementById(element);
+
+        if(action === 'schimba') {
+            el.style.backgroundColor = culoare;
+            document.getElementById('schimbaCuloare').style.display = 'none';
+            document.getElementById('defaultCuloare').style.display = 'block';
+        } else {
+            el.style.backgroundColor = defColor;
+            document.getElementById('defaultCuloare').style.display = 'none';
+            document.getElementById('schimbaCuloare').style.display = 'block';
+        }        
+    }
+</script>
+
+<div style="padding:20px">
+    <button type="button" onclick="arataMesaj('succes')">Arata mesaj</button>
+</div>
+
+<div style="padding:20px">
+    <button type="button" onclick="arataElement('mesaj')">Arata element</button>
+
+    <div id="mesaj" style="width: 300px; background-color: beige; color: black; border: rgb(235, 235, 235) dashed; margin: 20px 20px 20px 0; padding:10px; display:none">
+        <button id="schimbaCuloare" type="button" onclick="schimbaCuloarea('schimba', 'mesaj', '#ffffff')">Schimba-mi culoarea de fundal</button>
+        <button id="defaultCuloare" style="display: none;" type="button" onclick="schimbaCuloarea('default', 'mesaj', '#ffffff')">Aplica culoarea originala</button>
+    </div>
+</div>
