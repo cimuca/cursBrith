@@ -1,0 +1,103 @@
+<style>
+    .container {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        background-color: #EDF2F7;
+    }
+    .divider {
+        border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+        margin: 15px;
+    }
+
+    .content {
+        display: flex;
+        flex: 1 1 auto;
+        margin: 20px 100px 20px 100px;
+        flex-direction: row;
+        font-size: 16px;
+    }
+
+    .info {
+        width: 80%;
+        flex-direction: column;
+        line-height: 20px;
+    }
+
+    .info .prgr{
+        margin-bottom: 10px;
+    }
+
+    .myinfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        margin: 0 20px 0 20px
+    }
+
+    .urmareste {
+        display:flex; 
+        width: 100%; 
+        color: gainsboro; 
+        background-color: rgba(4, 120, 87, 1);
+        justify-content: center; 
+        align-items: center; 
+        height: 40px; 
+        font-size: 20px; 
+        border-style: none;
+        cursor: pointer;
+    }
+
+    .urmareste:hover{
+        background-color: rgba(4, 120, 87, 0.5);
+        color: black;
+    }
+</style>
+
+<div class="container">
+    <div style="display: flex; flex-direction: column; margin: 20px 100px 20px 100px;">
+        <div style="padding: 0 4px 0 4px">
+            <h2 style="font-weight: 800; font-size: 40px; margin:20px 0 0 0">
+                Lorem ipsum dolor sit amet
+            </h2>
+        </div>
+        <div class="divider"></div>
+        <img src="assets/images/acasa.jpg" style="width: 100%; object-fit: cover; height: 28em;"/>
+        <div class="divider"></div>
+    </div>
+    <div class="content">
+        <div class="info">
+            <div class="prgr">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt libero vitae augue hendrerit, ut cursus ipsum posuere. Fusce tempus consequat felis, ut egestas ligula rhoncus a. Vivamus dictum lobortis nunc, in molestie urna hendrerit ut. Etiam dignissim diam sit amet ligula ornare, vel consequat magna faucibus. Maecenas hendrerit nisi eu ipsum convallis pellentesque. Aliquam vulputate mattis vehicula. Maecenas enim turpis, cursus sed euismod eget, congue sed elit. In vehicula nibh quam, ut fermentum odio blandit ac. Integer sit amet nisl molestie, consequat diam et, porta est. Praesent volutpat magna a velit lacinia, et porttitor lorem dignissim. Quisque varius porttitor purus ut consectetur. Integer molestie ipsum lorem, sit amet posuere mauris sollicitudin ut.
+            </div>
+            <div style="border-left: gainsboro solid 4px; font-style: italic; padding-left:10px; margin-top: 20px;">
+                Maecenas et neque a quam egestas ornare blandit eget tellus. Aliquam aliquam turpis eu volutpat volutpat. Sed ipsum est, rhoncus eget risus sed, ultricies ultricies massa. Maecenas vulputate rutrum orci sed pretium. Aliquam consequat ut nisi at molestie. Donec consectetur nisi ornare neque vulputate, ac auctor leo maximus. Curabitur venenatis massa sed facilisis bibendum. Nulla viverra quis quam vel mollis. Nulla blandit auctor ante. Praesent suscipit at augue in ultrices. Etiam turpis ante, auctor vel neque a, fringilla porttitor purus. Aliquam lorem ante, vulputate vitae tempor vitae, consectetur eget magna. Quisque iaculis purus a eros varius lacinia. Nam sed risus eget erat molestie suscipit. Praesent molestie vestibulum convallis.
+            </div>
+        </div>
+        <div class="myinfo">
+            <div style="padding:4px; border: 1px solid gainsboro; border-radius: 0.25rem;">
+                <div style="display:flex; justify-items:center">
+                  <img src="assets/images/profil.jpg"
+                    style="margin: 5px;object-fit: cover; border-radius: 9999px;"/>
+                  <div>
+                    <p style="font-weight: 800; font-size: 30px;margin-left: 20px">Cimuca Cristian</p>
+                    <p style="font-size: 15px;margin-left: 20px">Muncitor necalificat </p>
+                  </div>
+                </div>
+                <p style="font-style: italic; margin:20px">
+                    Vivamus dictum lobortis nunc, in molestie urna hendrerit ut. Etiam dignissim diam sit amet ligula ornare, vel consequat magna faucibus.
+                </p>
+                <a href="https://www.instagram.com/" target="_blank" style="text-decoration: none;">
+                    <button class="urmareste">
+                        Urmareste-ma pe Instagram 
+                    <i class='bx bx-user-plus ml-2' ></i>
+                    </button>
+                </a>
+              </div>
+        </div>
+    </div>
+</div>

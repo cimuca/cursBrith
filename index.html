@@ -12,11 +12,8 @@
     <!-- CSS -->
     <link href="assets/styles/main.css" rel="stylesheet">
 
-    <style type="text/css">
-      #frameCont {
-          width: 100%;
-      }
-    </style>
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="assets/js/main.js"></script>
 
     <!--
     <script type="text/javascript">
@@ -26,7 +23,7 @@
     </script>
     -->
   </head>
-  <body>
+  <body onload="init()">
     <div id="main">
 
       <div class="container">
@@ -48,16 +45,12 @@
 
             <!-- Navigator -->
             <nav>
-              <a href="curriculumvitae.html" class="text-sm" target="frame">Curriculum vitae</a>
-              <a href="mozaic.html" class="text-sm" target="frame">Mozaic</a>
-              <a href="poveste.html" class="text-sm" target="frame">Poveste</a>
-              <a href="galeriefoto.html" class="text-sm" target="frame">Galerie foto</a>
-              <a href="./harta/index.html" class="text-sm" target="frame">Harta</a>
-              <a href="contact.html" class="text-sm" target="frame">Contact</a>
-              <a href="lectia4.html" class="text-sm" target="frame">Lectia 4 p. I</a>
-              <a href="lectia4_2.html" class="text-sm" target="frame">Lectia 4 p. II</a>
-              <a href="lectia8.html" class="text-sm" target="frame">Lectia 8 p. I</a>
-              <a href="lectia8_2.html" class="text-sm" target="frame">Lectia 8 p. II</a>
+              <a href="acasa.html" class="text-sm" target="frame" id="fAcasa" onclick="frameIn('fAcasa')">Acasa</a>
+              <a href="curriculumvitae.html" class="text-sm" target="frame" id="fCv" onclick="frameIn('fCv')">Curriculum vitae</a>
+              <a href="mozaic.html" class="text-sm" target="frame" id="fMozaic" onclick="frameIn('fMozaic')">Mozaic</a>
+              <a href="poveste.html" class="text-sm" target="frame" id="fPoveste" onclick="frameIn('fPoveste')">Poveste</a>
+              <a href="galeriefoto.html" class="text-sm" target="frame" id="fFoto" onclick="frameIn('fFoto')">Galerie foto</a>
+              <a href="contact.html" class="text-sm" target="frame" id="fContact" onclick="frameIn('fContact')">Contact</a>
             </nav>
         </div>
 
